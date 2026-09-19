@@ -26,18 +26,14 @@
 
   /* ---------- 買取実績データ（イメージ。実データに差し替え可） ---------- */
   var results=[
-    {diff:'+320',pref:'愛知県',car:'フェラーリ 488 GTB',year:'2018',km:'18,000',when:'2025年8月'},
-    {diff:'+280',pref:'東京都',car:'ランボルギーニ ウラカン EVO',year:'2020',km:'12,000',when:'2025年7月'},
-    {diff:'+150',pref:'大阪府',car:'ポルシェ 911 カレラS (992)',year:'2021',km:'9,500',when:'2025年6月'},
-    {diff:'+210',pref:'福岡県',car:'マクラーレン 570S',year:'2017',km:'22,000',when:'2025年5月'},
-    {diff:'+95',pref:'神奈川県',car:'メルセデスAMG GT 63 S 4MATIC+',year:'2020',km:'27,000',when:'2025年5月'},
-    {diff:'+70',pref:'兵庫県',car:'BMW M4 コンペティション',year:'2022',km:'8,000',when:'2025年4月'},
-    {diff:'+120',pref:'埼玉県',car:'アウディ R8 V10 パフォーマンス',year:'2019',km:'19,000',when:'2025年4月'},
-    {diff:'+60',pref:'千葉県',car:'レクサス LC500 Sパッケージ',year:'2021',km:'14,000',when:'2025年3月'},
-    {diff:'+180',pref:'京都府',car:'ロータス エミーラ V6',year:'2023',km:'5,000',when:'2025年3月'},
-    {diff:'+240',pref:'静岡県',car:'ポルシェ 964 カレラ2 (ネオクラシック)',year:'1991',km:'78,000',when:'2025年2月'},
-    {diff:'+90',pref:'広島県',car:'BMW Z8 (ネオクラシック)',year:'2001',km:'42,000',when:'2025年2月'},
-    {diff:'+310',pref:'宮城県',car:'フェラーリ 360 モデナ (ネオクラシック)',year:'2001',km:'55,000',when:'2025年1月'}
+    {img:'g-ferrari-f12.jpg', diff:'+320',pref:'愛知県',car:'フェラーリ F12ベルリネッタ',year:'2015',km:'21,000',when:'2025年8月'},
+    {img:'g-lambo-huracan.jpg',diff:'+280',pref:'東京都',car:'ランボルギーニ ウラカン EVO',year:'2020',km:'12,000',when:'2025年7月'},
+    {img:'g-porsche-gt3.jpg',  diff:'+240',pref:'大阪府',car:'ポルシェ 911 GT3 RS (991後期)',year:'2019',km:'9,500',when:'2025年6月'},
+    {img:'g-mclaren-720.jpg',  diff:'+210',pref:'福岡県',car:'マクラーレン 720S',year:'2018',km:'16,000',when:'2025年5月'},
+    {img:'g-ferrari-458.jpg',  diff:'+190',pref:'神奈川県',car:'フェラーリ 458 スパイダー',year:'2013',km:'27,000',when:'2025年5月'},
+    {img:'g-aston-db11.jpg',   diff:'+120',pref:'兵庫県',car:'アストンマーティン DB11',year:'2019',km:'18,000',when:'2025年4月'},
+    {img:'g-mclaren-570.jpg',  diff:'+150',pref:'埼玉県',car:'マクラーレン 570S',year:'2017',km:'22,000',when:'2025年4月'},
+    {img:'g-corvette-c8.jpg',  diff:'+90', pref:'千葉県',car:'シボレー コルベット C8 スティングレイ',year:'2021',km:'14,000',when:'2025年3月'}
   ];
 
   var track=document.getElementById('galleryTrack');
@@ -48,7 +44,7 @@
         +'<div class="rc-media">'
           +'<div class="rc-badge"><small>他社査定より</small><b>'+r.diff+'<sup>万円</sup></b><span>買取UP</span></div>'
           +'<div class="rc-pref">'+r.pref+'のお客様</div>'
-          +'<div class="img-slot">CAR PHOTO</div>'
+          +'<img class="rc-img" src="images/'+r.img+'" alt="'+r.car+'" loading="lazy">'
         +'</div>'
         +'<div class="rc-body">'
           +'<p class="rc-car">'+r.car+'</p>'

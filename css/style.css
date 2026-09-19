@@ -398,6 +398,80 @@ section{scroll-margin-top:80px}
   .site-footer{padding-bottom:80px}
   body{padding-bottom:0}
 }
+/* =========================================================
+   PHOTO INTEGRATION & REFINEMENTS
+   ========================================================= */
+
+/* ---- hero photographic depth ---- */
+.hero-photo{
+  position:absolute;inset:0;z-index:0;
+  background:url("../images/hero-bg.jpg") center/cover no-repeat;
+  opacity:.10;filter:grayscale(.2) contrast(1.05);
+}
+.hero-bg{
+  background:
+    radial-gradient(1100px 560px at 78% 32%,rgba(230,0,18,.08),transparent 60%),
+    linear-gradient(120deg,rgba(246,247,249,.9) 0%,rgba(236,238,242,.72) 45%,rgba(223,227,234,.55) 100%),
+    repeating-linear-gradient(90deg,rgba(0,0,0,.02) 0 2px,transparent 2px 40px);
+}
+.car-slot{background:#14171d}
+.car-slot img{width:100%;height:100%;object-fit:cover;display:block}
+.car-slot::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),inset 0 -40px 60px rgba(0,0,0,.35)}
+
+/* ---- brand grid: premium dark refinement ---- */
+.brand-card{
+  background:linear-gradient(160deg,#1a1e25,#111418);border:1px solid rgba(255,255,255,.08);
+}
+.brand-card::before{background:var(--gold-lt)}
+.brand-card:hover{box-shadow:0 16px 40px rgba(0,0,0,.35);border-color:rgba(201,162,39,.4)}
+.brand-card .bc-en{color:#fff}
+.brand-card .bc-jp{color:rgba(255,255,255,.55)}
+.brand-card--wide{background:linear-gradient(120deg,#20242c,#15181e)}
+.brand-card--wide .bc-en{color:var(--gold-lt)}
+
+/* ---- neo-classic banner with photo ---- */
+.neo-inner--photo{
+  background:
+    linear-gradient(100deg,rgba(15,18,22,.94) 30%,rgba(20,23,28,.72) 100%),
+    url("../images/neo-bg.jpg") center/cover no-repeat;
+}
+
+/* ---- cinematic full-width bands ---- */
+.cine-band{position:relative;min-height:340px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background-attachment:fixed;background-position:center;background-size:cover;overflow:hidden}
+.cine-band--quality{background-image:url("../images/band-quality.jpg")}
+.cine-band--cta{background-image:url("../images/band-cta.jpg")}
+.cine-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,15,.72),rgba(10,12,15,.55) 50%,rgba(10,12,15,.8));z-index:1}
+.cine-band--cta .cine-overlay{background:linear-gradient(180deg,rgba(10,12,15,.78),rgba(20,10,12,.6) 50%,rgba(10,12,15,.85))}
+.cine-content{position:relative;z-index:2;max-width:820px;padding:60px 24px}
+.cine-en{display:block;font-family:"Montserrat";font-weight:800;letter-spacing:.28em;font-size:.78rem;color:var(--gold-lt);margin-bottom:14px}
+.cine-content h2{font-size:2.2rem;font-weight:900;line-height:1.4;text-shadow:0 4px 20px rgba(0,0,0,.5)}
+.cine-content h2 em{color:var(--gold-lt)}
+.cine-band--cta .cine-content h2 em{color:#ff5a5a}
+.cine-content p{margin-top:14px;font-size:1.02rem;color:rgba(255,255,255,.9);text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.cine-btn{display:inline-block;margin-top:26px;background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff;font-weight:900;font-size:1.1rem;padding:16px 38px;border-radius:10px;box-shadow:0 12px 30px rgba(230,0,18,.45);transition:transform .2s,box-shadow .2s}
+.cine-btn:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(230,0,18,.6)}
+
+/* ---- reason section photos ---- */
+.reason-thumb{background:#14171d;overflow:hidden}
+.reason-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.reason-item:hover .reason-thumb img{transform:scale(1.06)}
+.reason-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.35))}
+
+/* ---- gallery result card photos ---- */
+.rc-media{overflow:hidden;background:#14171d}
+.rc-img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .6s ease}
+.result-card:hover .rc-img{transform:scale(1.07)}
+.rc-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,transparent 30%,transparent 60%,rgba(0,0,0,.25));z-index:1}
+
+/* iOS: disable fixed attachment (jank) */
+@media(hover:none){.cine-band{background-attachment:scroll}}
+
+@media(max-width:640px){
+  .cine-band{min-height:280px}
+  .cine-content h2{font-size:1.6rem}
+  .cine-content p{font-size:.92rem}
+}
+
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
