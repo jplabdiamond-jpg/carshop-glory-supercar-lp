@@ -465,6 +465,28 @@ section{scroll-margin-top:80px}
 .result-card:hover .rc-img{transform:scale(1.07)}
 .rc-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,transparent 30%,transparent 60%,rgba(0,0,0,.25));z-index:1}
 
+/* ---- Instagram section ---- */
+.insta{background:var(--gray);padding-bottom:70px}
+.insta-wrap{max-width:960px;margin:0 auto;padding:0 20px;text-align:center}
+.insta-embed{border-radius:14px;overflow:hidden}
+.insta-embed iframe{width:100%!important;border:0;display:block;border-radius:14px}
+.insta-placeholder{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 6px 20px rgba(0,0,0,.05)}
+.ip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ip-cell{position:relative;aspect-ratio:1/1;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:linear-gradient(135deg,#405de6,#833ab4 35%,#c13584 60%,#e1306c 78%,#fd1d1d 92%,#fcb045);
+  color:#fff;font-weight:800;font-size:.82rem;text-align:center;padding:8px;transition:transform .25s,box-shadow .25s}
+.ip-cell span{position:relative;z-index:2;text-shadow:0 1px 4px rgba(0,0,0,.35)}
+.ip-cell::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.12);transition:background .25s}
+.ip-cell:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(193,53,132,.4)}
+.ip-cell:hover::after{background:rgba(0,0,0,0)}
+.ip-note{margin-top:16px;font-size:.85rem;color:var(--muted);font-weight:700}
+.insta-btn{display:inline-flex;align-items:center;gap:10px;margin-top:26px;
+  background:linear-gradient(135deg,#405de6,#833ab4 40%,#c13584 70%,#fd1d1d);color:#fff;font-weight:900;font-size:1.05rem;
+  padding:15px 32px;border-radius:10px;box-shadow:0 10px 26px rgba(193,53,132,.4);transition:transform .2s,box-shadow .2s}
+.insta-btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(193,53,132,.55)}
+.insta-ico{font-size:1.2rem}
+@media(max-width:640px){.ip-grid{grid-template-columns:repeat(2,1fr)}}
+
 /* iOS: disable fixed attachment (jank) */
 @media(hover:none){.cine-band{background-attachment:scroll}}
 
