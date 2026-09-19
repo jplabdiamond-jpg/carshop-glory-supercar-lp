@@ -145,12 +145,12 @@ em{font-style:normal;color:var(--red)}
 .hbb-text .hl{color:var(--gold-lt)}
 .hbb-arrow{font-size:1.4rem}
 .hero-brands{margin-top:20px;font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.06em;color:var(--muted)}
-.hero-visual{position:relative;height:520px}
-.car-slot{position:absolute;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,.4)}
-.car-slot--1{width:56%;height:34%;top:2%;left:4%;animation:slideL 1s .2s ease both}
-.car-slot--2{width:60%;height:36%;top:26%;right:0;animation:slideR 1s .4s ease both}
-.car-slot--3{width:52%;height:34%;top:52%;left:0;animation:slideL 1s .6s ease both}
-.car-slot--4{width:64%;height:40%;bottom:0;right:2%;animation:slideR 1s .8s ease both;z-index:2}
+.hero-visual{position:relative;height:600px}
+.car-slot{position:absolute;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,.4)}
+.car-slot--1{width:68%;height:42%;top:0;left:0;animation:slideL 1s .2s ease both}
+.car-slot--2{width:72%;height:44%;top:24%;right:-4%;animation:slideR 1s .4s ease both;z-index:3}
+.car-slot--3{width:62%;height:42%;top:52%;left:-2%;animation:slideL 1s .6s ease both;z-index:2}
+.car-slot--4{width:76%;height:48%;bottom:0;right:-2%;animation:slideR 1s .8s ease both;z-index:4}
 .scroll-cue{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:3;font-family:"Montserrat";font-size:.6rem;font-weight:700;letter-spacing:.2em;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:34px}
 .scroll-cue span{position:relative;width:1px;height:40px;background:var(--line)}
 .scroll-cue span::after{content:"";position:absolute;top:0;left:0;width:100%;height:12px;background:var(--red);animation:cue 1.8s infinite}
@@ -367,7 +367,7 @@ section{scroll-margin-top:80px}
   .nav-toggle{display:flex;order:3}
   .head-tel{display:none}
   .hero-inner{grid-template-columns:1fr}
-  .hero-visual{height:340px;order:-1;margin-bottom:10px}
+  .hero-visual{height:400px;order:-1;margin-bottom:10px}
   .hero{min-height:auto;padding-top:80px}
   .scroll-cue{display:none}
   .brand-grid{grid-template-columns:repeat(2,1fr)}
