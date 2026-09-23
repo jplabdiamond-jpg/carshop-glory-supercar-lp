@@ -55,6 +55,7 @@ em{font-style:normal;color:var(--red)}
   display:flex;align-items:center;gap:18px;
 }
 .brand{display:flex;flex-direction:column;line-height:1;flex-shrink:0}
+.brand-logo{height:48px;width:auto;display:block;border-radius:4px}
 .brand-mark{
   font-family:"Oswald",sans-serif;font-weight:700;font-size:1.9rem;letter-spacing:.04em;
   color:var(--ink);
@@ -322,6 +323,7 @@ section{scroll-margin-top:80px}
 /* ============ FOOTER ============ */
 .site-footer{background:var(--ink);color:#fff;padding:50px 20px 30px}
 .footer-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-logo{height:52px;width:auto;display:block;border-radius:4px;margin-bottom:4px}
 .footer-brand .brand-mark{color:#fff}
 .footer-brand .brand-mark::first-letter{color:var(--red)}
 .footer-brand .brand-sub{color:rgba(255,255,255,.5)}
@@ -486,6 +488,21 @@ section{scroll-margin-top:80px}
 .insta-btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(193,53,132,.55)}
 .insta-ico{font-size:1.2rem}
 @media(max-width:640px){.insta-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
+
+/* ---- 代表あいさつ MESSAGE ---- */
+.message{padding-bottom:70px}
+.message-inner{max-width:var(--maxw);margin:0 auto;padding:0 20px;display:grid;grid-template-columns:320px 1fr;gap:40px;align-items:center}
+.message-photo{position:relative}
+.message-photo img{width:100%;border-radius:14px;box-shadow:var(--shadow);display:block}
+.message-name{display:block;margin-top:14px;text-align:center;font-size:1.25rem;font-weight:900;color:var(--ink)}
+.message-name small{display:block;font-size:.8rem;color:var(--muted);font-weight:700;margin-bottom:2px}
+.message-body p{font-size:1rem;line-height:2;color:var(--text);margin-bottom:18px}
+.message-body p:last-child{margin-bottom:0}
+.message-body em{color:var(--red);font-weight:700;font-style:normal}
+@media(max-width:900px){
+  .message-inner{grid-template-columns:1fr;gap:24px}
+  .message-photo{max-width:340px;margin:0 auto}
+}
 
 /* iOS: disable fixed attachment (jank) */
 @media(hover:none){.cine-band{background-attachment:scroll}}
