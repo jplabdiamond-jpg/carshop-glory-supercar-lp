@@ -468,24 +468,24 @@ section{scroll-margin-top:80px}
 /* ---- Instagram section ---- */
 .insta{background:var(--gray);padding-bottom:70px}
 .insta-wrap{max-width:960px;margin:0 auto;padding:0 20px;text-align:center}
-.insta-embed{border-radius:14px;overflow:hidden}
-.insta-embed iframe{width:100%!important;border:0;display:block;border-radius:14px}
-.insta-placeholder{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 6px 20px rgba(0,0,0,.05)}
-.ip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.ip-cell{position:relative;aspect-ratio:1/1;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;
+.insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.insta-cell{position:relative;aspect-ratio:1/1;border-radius:12px;overflow:hidden;display:block;
   background:linear-gradient(135deg,#405de6,#833ab4 35%,#c13584 60%,#e1306c 78%,#fd1d1d 92%,#fcb045);
-  color:#fff;font-weight:800;font-size:.82rem;text-align:center;padding:8px;transition:transform .25s,box-shadow .25s}
-.ip-cell span{position:relative;z-index:2;text-shadow:0 1px 4px rgba(0,0,0,.35)}
-.ip-cell::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.12);transition:background .25s}
-.ip-cell:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(193,53,132,.4)}
-.ip-cell:hover::after{background:rgba(0,0,0,0)}
-.ip-note{margin-top:16px;font-size:.85rem;color:var(--muted);font-weight:700}
+  box-shadow:0 6px 20px rgba(0,0,0,.08);transition:transform .25s,box-shadow .25s}
+.insta-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.insta-cell .insta-ph{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:#fff;font-family:"Montserrat";font-weight:800;letter-spacing:.1em;font-size:.9rem;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+.insta-cell.is-empty img{display:none}
+.insta-cell.is-empty .insta-ph{display:flex}
+.insta-hover{position:absolute;left:0;right:0;bottom:0;padding:10px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.6));color:#fff;font-weight:800;font-size:.82rem;text-align:center;opacity:0;transform:translateY(8px);transition:opacity .25s,transform .25s;z-index:2}
+.insta-cell:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(193,53,132,.35)}
+.insta-cell:hover img{transform:scale(1.06)}
+.insta-cell:hover .insta-hover{opacity:1;transform:none}
 .insta-btn{display:inline-flex;align-items:center;gap:10px;margin-top:26px;
   background:linear-gradient(135deg,#405de6,#833ab4 40%,#c13584 70%,#fd1d1d);color:#fff;font-weight:900;font-size:1.05rem;
   padding:15px 32px;border-radius:10px;box-shadow:0 10px 26px rgba(193,53,132,.4);transition:transform .2s,box-shadow .2s}
 .insta-btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(193,53,132,.55)}
 .insta-ico{font-size:1.2rem}
-@media(max-width:640px){.ip-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.insta-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
 
 /* iOS: disable fixed attachment (jank) */
 @media(hover:none){.cine-band{background-attachment:scroll}}

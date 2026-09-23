@@ -167,24 +167,38 @@
 
   <div class="insta-wrap">
     <!--
-      ▼▼▼ 自動更新フィードの設置方法 ▼▼▼
-      SnapWidget（無料）等でInstagramフィードのウィジェットを作成し、
-      発行された <iframe> または <script> 埋め込みコードを、
-      下の <div class="insta-embed"> の中（プレースホルダーと差し替え）に貼り付けてください。
-      貼り付けると、最新投稿が自動で常に表示されます。
-      例）SnapWidget: https://snapwidget.com/ でアカウント連携 → Grid形式を選択 → Get Widget
+      ▼▼▼ 投稿写真の掲載方法（手動更新）▼▼▼
+      images/ フォルダに投稿写真を insta-1.jpg 〜 insta-6.jpg として入れると、
+      下のグリッドに表示されます（正方形にトリミング表示）。
+      各セルの href を、その投稿の個別URL（例：https://www.instagram.com/p/XXXXXXXXX/）に
+      書き換えると、写真クリックでその投稿へ移動します。未設定の場合はプロフィールへ移動します。
+      写真を差し替えるだけで更新できます。
     -->
-    <div class="insta-embed" id="instaEmbed">
-      <!-- プレースホルダー（埋め込みコード未設定時に表示） -->
-      <div class="insta-placeholder">
-        <div class="ip-grid">
-          <a class="ip-cell" href="https://www.instagram.com/carshopglory.kaitori/" target="_blank" rel="noopener"><span>@carshopglory.kaitori</span></a>
-          <a class="ip-cell" href="https://www.instagram.com/carshopglory.kaitori/" target="_blank" rel="noopener"><span>入庫情報</span></a>
-          <a class="ip-cell" href="https://www.instagram.com/carshopglory.kaitori/" target="_blank" rel="noopener"><span>買取実績</span></a>
-          <a class="ip-cell" href="https://www.instagram.com/carshopglory.kaitori/" target="_blank" rel="noopener"><span>スタッフ日常</span></a>
-        </div>
-        <p class="ip-note">最新の投稿はInstagramでご覧いただけます</p>
-      </div>
+    <div class="insta-grid" id="instaGrid">
+      <a class="insta-cell" href="https://www.instagram.com/carshopglory.kaitori/" target="_blank" rel="noopener">
+        <img src="images/insta-1.jpg" alt="Car Shop Gloryの投稿" loading="lazy" onerror="this.closest('.insta-cell').classList.add('is-empty')">
+        <span class="insta-ph">POST 1</span><span class="insta-hover">◎ 投稿を見る</span>
+      </a>
+      <a class="insta-cell" href="https://www.instagram.com/carshopglory.kaitori/" target="_blank" rel="noopener">
+        <img src="images/insta-2.jpg" alt="Car Shop Gloryの投稿" loading="lazy" onerror="this.closest('.insta-cell').classList.add('is-empty')">
+        <span class="insta-ph">POST 2</span><span class="insta-hover">◎ 投稿を見る</span>
+      </a>
+      <a class="insta-cell" href="https://www.instagram.com/carshopglory.kaitori/" target="_blank" rel="noopener">
+        <img src="images/insta-3.jpg" alt="Car Shop Gloryの投稿" loading="lazy" onerror="this.closest('.insta-cell').classList.add('is-empty')">
+        <span class="insta-ph">POST 3</span><span class="insta-hover">◎ 投稿を見る</span>
+      </a>
+      <a class="insta-cell" href="https://www.instagram.com/carshopglory.kaitori/" target="_blank" rel="noopener">
+        <img src="images/insta-4.jpg" alt="Car Shop Gloryの投稿" loading="lazy" onerror="this.closest('.insta-cell').classList.add('is-empty')">
+        <span class="insta-ph">POST 4</span><span class="insta-hover">◎ 投稿を見る</span>
+      </a>
+      <a class="insta-cell" href="https://www.instagram.com/carshopglory.kaitori/" target="_blank" rel="noopener">
+        <img src="images/insta-5.jpg" alt="Car Shop Gloryの投稿" loading="lazy" onerror="this.closest('.insta-cell').classList.add('is-empty')">
+        <span class="insta-ph">POST 5</span><span class="insta-hover">◎ 投稿を見る</span>
+      </a>
+      <a class="insta-cell" href="https://www.instagram.com/carshopglory.kaitori/" target="_blank" rel="noopener">
+        <img src="images/insta-6.jpg" alt="Car Shop Gloryの投稿" loading="lazy" onerror="this.closest('.insta-cell').classList.add('is-empty')">
+        <span class="insta-ph">POST 6</span><span class="insta-hover">◎ 投稿を見る</span>
+      </a>
     </div>
 
     <a href="https://www.instagram.com/carshopglory.kaitori/" target="_blank" rel="noopener" class="insta-btn">
