@@ -25,21 +25,23 @@
   }
 
   /* ---------- 買取実績データ（イメージ。実データに差し替え可） ---------- */
+  // 買取実績（実データ・新しい順）
   var results=[
-    {img:'g-ferrari-f12.jpg', diff:'+320',pref:'愛知県',car:'フェラーリ F12ベルリネッタ',year:'2015',km:'21,000',when:'2025年8月'},
-    {img:'g-lambo-huracan.jpg',diff:'+280',pref:'東京都',car:'ランボルギーニ ウラカン EVO',year:'2020',km:'12,000',when:'2025年7月'},
-    {img:'g-porsche-gt3.jpg',  diff:'+240',pref:'大阪府',car:'ポルシェ 911 GT3 RS (991後期)',year:'2019',km:'9,500',when:'2025年6月'},
-    {img:'g-mclaren-720.jpg',  diff:'+210',pref:'福岡県',car:'マクラーレン 720S',year:'2018',km:'16,000',when:'2025年5月'},
-    {img:'g-ferrari-458.jpg',  diff:'+190',pref:'神奈川県',car:'フェラーリ 458 スパイダー',year:'2013',km:'27,000',when:'2025年5月'},
-    {img:'g-aston-db11.jpg',   diff:'+120',pref:'兵庫県',car:'アストンマーティン DB11',year:'2019',km:'18,000',when:'2025年4月'},
-    {img:'g-mclaren-570.jpg',  diff:'+150',pref:'埼玉県',car:'マクラーレン 570S',year:'2017',km:'22,000',when:'2025年4月'},
-    {img:'g-corvette-c8.jpg',  diff:'+90', pref:'千葉県',car:'シボレー コルベット C8 スティングレイ',year:'2021',km:'14,000',when:'2025年3月'}
+    {img:'g-porsche-911turbo.jpg',diff:'+40', pref:'愛知県',car:'ポルシェ 911ターボS',year:'令和3年(R3)'},
+    {img:'g-ferrari-roma.jpg',    diff:'+150',pref:'福岡県',car:'フェラーリ ローマ スパイダー',year:'令和7年(R7)'},
+    {img:'g-ferrari-f355.jpg',    diff:'+100',pref:'愛知県',car:'フェラーリ F355 ベルリネッタ',year:'平成9年(H9)'},
+    {img:'g-lambo-murcielago.jpg',diff:'+200',pref:'大阪府',car:'ランボルギーニ ムルシエラゴ ロードスター',year:'平成19年(H19)'},
+    {img:'g-mclaren-570gt.jpg',   diff:'+50', pref:'愛知県',car:'マクラーレン 570GT',year:'平成30年(H30)'}
   ];
 
   var track=document.getElementById('galleryTrack');
   if(track){
     var html='';
     results.forEach(function(r){
+      var spec='<div><dt>年式</dt><dd>'+r.year+'</dd></div>'
+             + '<div><dt>地域</dt><dd>'+r.pref+'</dd></div>';
+      if(r.km) spec+='<div><dt>走行距離</dt><dd>'+r.km+'km</dd></div>';
+      var cols=r.km?3:2;
       html+='<article class="result-card">'
         +'<div class="rc-media">'
           +'<div class="rc-badge"><small>他社査定より</small><b>'+r.diff+'<sup>万円</sup></b><span>買取UP</span></div>'
@@ -48,10 +50,8 @@
         +'</div>'
         +'<div class="rc-body">'
           +'<p class="rc-car">'+r.car+'</p>'
-          +'<dl class="rc-spec">'
-            +'<div><dt>年式</dt><dd>'+r.year+'</dd></div>'
-            +'<div><dt>走行距離</dt><dd>'+r.km+'km</dd></div>'
-            +'<div><dt>買取時期</dt><dd>'+r.when+'</dd></div>'
+          +'<dl class="rc-spec" style="grid-template-columns:repeat('+cols+',1fr)">'
+            +spec
           +'</dl>'
         +'</div>'
       +'</article>';
